@@ -1,6 +1,6 @@
-## 1 下载 wolframscript
+## 1 安装 wolframscript
 
-下载 [wolfram 引擎](https://www.wolfram.com/engine/) 并安装
+下载 [Wolfram 引擎](https://www.wolfram.com/engine/) 并安装
 
 注册账号
 
