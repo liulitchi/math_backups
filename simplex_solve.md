@@ -1,4 +1,4 @@
-以一道 IBM 网页上的[运筹学习题](https://www.ibm.com/developerworks/cn/linux/l-glpk1/index.html)为例。
+以IBM 网页上一道[运筹学习题](https://www.ibm.com/developerworks/cn/linux/l-glpk1/index.html)为例。
 
 原题：某公司生产销售两种木制玩具：士兵和火车。
 玩具士兵单价 27 元，原材料耗费 10 元，同时每个玩具士兵耗费公司可变人力成本和间接成本 14 元。
@@ -13,6 +13,7 @@
 
 在这里，我们有单纯形法来表述。设公司每周生产士兵数量为 X_1 , 生产火车数量为 X_2,收益为 z 。则根据题意，有：
 
+```
 (27 - 10 - 14)*(x_1) + (21 - 9 - 10)*(x_2) =!= max
 
 2*(x_1) + x_2 <= 100
@@ -22,8 +23,9 @@ x_1 + x_2 <= 80
 x_1 <= 40
 
 x_1 >= 0, x_2 >=0
+```
 
-## GLPK 软件解决：
+## 用 GLPK 软件包解决：
 
 Debian 安装 GLPK ： `sudo apt install glpk-utils`
 
@@ -31,7 +33,7 @@ OpenBSD 安装 GLPK ： `doas pkg_add glpk-utils`
 
 vim toy.mod
 
-```
+```toy.mod
   /* Decision variables */
    var x1 >= 0;  # soldier 
    var x2 >= 0;  # train 
@@ -70,3 +72,18 @@ Objective:  z = 180 (MAXimum)
 ```
 
 根据软件运行结果可知，最大收益为 180 元。其中每周生产玩具士兵 20 名，玩具火车 60 辆。
+
+## 用软件 maxima 解决：
+
+```maxima
+load("simplex")$
+
+maximize_lp(3*x1 + 2*x2, [2*x1 + x2 <= 100, x1 + x2 <= 80, x1 <= 40]), nonnegative_lp=true;
+```
+输出结果为 ` [180, [x2 = 60, x1 = 20]]` ，可以看出和 GLPK 求解相同。
+
+## 用软件 mathematica 解决：
+
+```mathematica
+
+```
