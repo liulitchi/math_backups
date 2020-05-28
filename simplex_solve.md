@@ -1,4 +1,4 @@
-以IBM 网页上一道[运筹学习题](https://www.ibm.com/developerworks/cn/linux/l-glpk1/index.html)为例。
+以IBM 网页上一道[运筹学之习题](https://www.ibm.com/developerworks/cn/linux/l-glpk1/index.html)为例。
 
 原题：某公司生产销售两种木制玩具：士兵和火车。
 玩具士兵单价 27 元，原材料耗费 10 元，同时每个玩具士兵耗费公司可变人力成本和间接成本 14 元。
@@ -85,7 +85,7 @@ maximize_lp(3*x1 + 2*x2, [2*x1 + x2 <= 100, x1 + x2 <= 80, x1 <= 40]), nonnegati
 ## 用软件 mathematica 解决：
 
 ```wolfram
-(*常用Maximize函数，NMaximize函数取近似值*)
+(*常用Maximize函数，而NMaximize函数会取近似值*)
 Maximize[{3*x1 + 2*x2,
 2*x1 + x2 <= 100,
 x1 + x2 <= 80,
@@ -95,4 +95,4 @@ x2 >= 0},
 {x1,x2} ∈ Integers
 ]
 ```
-输出结果为 `{180., {x1 -> 20, x2 -> 60}}`。
+输出结果为 `{180, {x1 -> 20, x2 -> 60}}`。
