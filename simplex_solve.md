@@ -85,7 +85,7 @@ maximize_lp(3*x1 + 2*x2, [2*x1 + x2 <= 100, x1 + x2 <= 80, x1 <= 40]), nonnegati
 ## 用软件 mathematica 解决：
 
 ```wolfram
-(*如果给定 Maximize 一个含有近似数的表达式，系统会自动调用 NMaximize*)
+(*常用Maximize函数，NMaximize函数取近似值*)
 Maximize[{3*x1 + 2*x2,
 2*x1 + x2 <= 100,
 x1 + x2 <= 80,
