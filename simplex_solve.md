@@ -84,6 +84,15 @@ maximize_lp(3*x1 + 2*x2, [2*x1 + x2 <= 100, x1 + x2 <= 80, x1 <= 40]), nonnegati
 
 ## 用软件 mathematica 解决：
 
-```mathematica
+```wolfram
+(*Maximize[]，NMaximize[]*)
+NMaximize[3*x1 + 2*x2,
+2*x1 + x2 <= 100,
+x1 + x2 <= 80,
+x1 <= 40,
+x1 >= 0,
+x2 >= 0,
+{x1,x2} ∈ Integers
+]
 
 ```
