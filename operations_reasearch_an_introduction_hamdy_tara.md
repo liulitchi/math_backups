@@ -1,6 +1,6 @@
 ### 2.4.1 glpk solve
 
-```
+```glpk
 var x1; # personal
 var x2; # car
 var x3; # home
