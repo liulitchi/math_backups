@@ -64,6 +64,8 @@ end;
 
 ### 2.4.3 maxima solve
 
+数学表述：
+
 ```2.4.3.lisp
 load("simplex")$
 minimize_lp(50*x1 + 45*x2 + 55*x3 + 48*x4 + 52*x5 + 50*x6 + 8*(I1 + I2 + I3 + I4 + I5),
