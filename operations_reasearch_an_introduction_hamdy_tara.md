@@ -61,3 +61,17 @@ end;
 ```
 
 幸好四个值只有一个是非整数，此数取floor值即可。
+
+### 2.4.3 maxima solve
+
+```2.4.3.lisp
+load("simplex")$
+minimize_lp(50*x1 + 45*x2 + 55*x3 + 48*x4 + 52*x5 + 50*x6 + 8*(I1 + I2 + I3 + I4 + I5),
+[x1 + x2 + x3 + x4 + x5 + x6 = 1010,
+I1 = x1 - 100,
+I2 = I1 + x2 - 250,
+I3 = I2 + x3 - 190,
+I4 = I3 + x4 - 140,
+I5 = I4 + x5 - 220,
+I5 + x6 = 110 ]), nonnegative_lp = true;
+```
