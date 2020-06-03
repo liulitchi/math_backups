@@ -114,7 +114,7 @@ s.t. \[I_1 = 120 + Q_1 - 520 = Q_1 - 400\]
 
 [^1]: 原题为 `A company is planning the manufacture of a product for March, April, May, and June of next year. The demand quantities are 520, 720, 520, and 620 units, respectively. The company has a steady workforce of 10 employees but can meet fluctuating production needs by hiring and firing temporary workers. The extra costs of hiring and firing a temp in any month are $200 and $400, respectively. A permanent worker produces 12 units per month, and a temporary worker, lacking equal experience, produces 10 units per month. The company can produce more than needed in any month and carry the surplus over to a succeeding month at a holding cost of $50 per unit per month. Develop an optimal hiring/firing policy over the 4-month planning horizon.`
 
-[^2]: 代码为`
+[^2]: 代码为 `
 load("simplex")$
 minimize_lp(50*(I1 + I2 + I3) + 200*(h1 + h2 + h3 + h4) + 400*(f1 + f2 + f3 + f4),
 [10*x1 = I1 + 400,
@@ -128,7 +128,7 @@ x3 = x2 + h3 - f3,
 x4 = x3 + h4 - f4]), nonnegative_lp = true;
 `
 
-[^3]: 代码为`
+[^3]: 代码为 `
 load("simplex")$
 minimize_lp(50*(I1 + I2 + I3) + 200*x4,
 [I1 = Q1 - 400,
